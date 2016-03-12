@@ -1,0 +1,2 @@
+#!/bin/bash
+export LD_LIBRARY_PATH=/home/amit/codes/inet/udt/udt4/src:$LD_LIBRARY_PATH
