@@ -7,6 +7,9 @@
 using namespace std;
 
 int main(){
+	string filename;
+	cout << "Enter file name: ";
+	cin >> filename;
 	UDTSOCKET client = UDT::socket(AF_INET, SOCK_STREAM, 0);
 
 	sockaddr_in serv_addr;
@@ -23,7 +26,7 @@ int main(){
 	}
 	string line;
 	string text;
-	ifstream file("send_file");
+	ifstream file(filename.c_str());
 	if(file.is_open()){
 		while(getline(file, line)){
 			const char* buffer = line.c_str();
